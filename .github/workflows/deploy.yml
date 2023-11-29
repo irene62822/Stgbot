@@ -12,6 +12,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout deploy branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'refs/heads/deploy'
      
 
       - name: Deploy to Heroku
